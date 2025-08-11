@@ -719,10 +719,9 @@
             button.disabled = true;
             
             try {
-                // OPTION 1: Send to Google Sheets via Google Apps Script
-                // Uncomment and add your Google Apps Script Web App URL
-                /*
-                const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+                // Send to Google Sheets via Google Apps Script
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwle7qA7EgvmaQhOKOkaccSEyRSlOceomWmv-vcD_gDfpaHL_Kklll37t7EYAzIptm_XA/exec';
+                
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
@@ -731,7 +730,6 @@
                     },
                     body: JSON.stringify(formData)
                 });
-                */
                 
                 // OPTION 2: Send to Zapier Webhook (connects to 1000+ apps)
                 // Uncomment and add your Zapier webhook URL
@@ -793,7 +791,7 @@
                 console.log('Total leads captured:', existingLeads.length);
                 
                 // Show success message
-                button.textContent = 'Success! Check your email.';
+                button.textContent = "Thanks! We'll be in touch soon.";
                 button.style.background = 'var(--success)';
                 
                 // Track conversion if Google Analytics is installed
